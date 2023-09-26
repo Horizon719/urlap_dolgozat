@@ -36,7 +36,7 @@ class AutoUrlapView{
 
     #kattintasTrigger(esemenynev){
         const ESEMENYEM = new CustomEvent(esemenynev, {
-            detail: this.#adat
+            detail: {...this.#adat}
         });
         window.dispatchEvent(ESEMENYEM);
     }
